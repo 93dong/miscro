@@ -1,0 +1,12 @@
+{
+  "name": "miscoservice",
+  "version": "1.0.0",
+  "description": "misco USER",
+  "main": "index.js'",
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "mongodb": "^3.5.5",
+    "mongoose": "^5.9.7",
+    "seneca": "^3.20.3"
+  }
+}
