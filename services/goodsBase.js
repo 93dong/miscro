@@ -1,22 +1,19 @@
-var seneca = require('seneca')({tag: 'goods'});
+module.exports = function goodsBase (options) {
 
-/**
- * 商品服务
- */
-seneca.add({role: 'goods', method: 'getGoods'}, function (msg, replay) {
-  replay({})
-});
+  this.add({role: 'goods', method: 'add'}, function (msg, respond) {
+    respond(msg)
+  });
 
-seneca.add({role: 'goods', method: 'addGoods'}, function (msg, replay) {
-  replay({})
-});
+  this.add({role: 'goods', method: 'del'}, function (msg, respond) {
+    respond(msg)
+  });
 
-seneca.add({role: 'goods', method: 'delGoods'}, function (msg, replay) {
-  replay({})
-});
+  this.add({role: 'goods', method: 'edit'}, function (msg, respond) {
+    respond(msg)
+  });
 
-seneca.add({role: 'goods', method: 'editGoods'}, function (msg, replay) {
-  replay({})
-});
+  this.add({role:'goods',method:'query'}, function (msg, respond) {
+    respond(msg)
+  });
 
-
+};

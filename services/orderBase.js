@@ -1,22 +1,23 @@
-var seneca = require('seneca')({tag:'order'});
-
 /**
  * 订单服务
  */
-seneca.add({role:'order', method:'getOrder'},function(msg,replay){
-  replay({})
-});
+module.exports = function order (options) {
 
-seneca.add({role:'order', method:'createOrder'},function(msg,replay){
-  replay({})
-});
+  this.add({role: 'order', method: 'addOrder'}, function (msg, replay) {
+    replay({})
+  });
 
-seneca.add({role:'order', method:'cancelOrder'},function(msg,replay){
-  replay({})
-});
+  this.add({role: 'order', method: 'delOrder'}, function (msg, replay) {
+    replay({})
+  });
 
-seneca.add({role:'order', method:'editOrder'},function(msg,replay){
-  replay({})
-});
+  this.add({role: 'order', method: 'editOrder'}, function (msg, replay) {
+    replay({})
+  });
 
+  this.add({role: 'order', method: 'queryOrder'}, function (msg, replay) {
+    replay(msg)
+  });
+
+};
 
