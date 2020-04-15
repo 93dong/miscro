@@ -16,10 +16,10 @@ const senecaWebConfig = {
   context: Router(),
   adapter: require('seneca-web-adapter-koa2')
 };
-seneca.use(SenecaWeb, senecaWebConfig );
+seneca.use(SenecaWeb, senecaWebConfig);
 seneca.use('./services/goodsBase');
 seneca.use('./API/goods');
-seneca.client({});
+seneca.client({post: 3001, type: 'tcp', pin: 'role:order'});
 seneca.ready(() => {
   app.use(seneca.export('web/context')().routes())
 });
