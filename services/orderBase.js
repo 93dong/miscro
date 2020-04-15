@@ -16,7 +16,10 @@ module.exports = function order (options) {
   });
 
   this.add({role: 'order', method: 'queryOrder'}, function (msg, replay) {
-    replay(msg)
+    replay({
+      orderId:'dasdasda',
+      orderName:'钮宝宝买戒指了'
+    })
   });
 
 };

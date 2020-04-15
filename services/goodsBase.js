@@ -13,7 +13,11 @@ module.exports = function goodsBase (options) {
   });
 
   this.add({role:'goods',method:'query'}, function (msg, respond) {
-    respond(msg)
+    respond({
+      goodsID:'dasdsadsadas',
+      goodsName:'钮咕噜',
+      ...msg.params,
+    })
   });
 
 };
