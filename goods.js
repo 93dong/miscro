@@ -19,7 +19,7 @@ const senecaWebConfig = {
 seneca.use(SenecaWeb, senecaWebConfig);
 seneca.use('./services/goodsBase');
 seneca.use('./API/goods');
-seneca.client({post: 3001, type: 'tcp', pin: 'role:order'});
+seneca.client({type: 'http', pin: 'role:order'});
 seneca.ready(() => {
   app.use(seneca.export('web/context')().routes())
 });

@@ -20,7 +20,7 @@ seneca.use(SenecaWeb, senecaWebConfig);
 seneca.use('./services/orderBase');
 seneca.use('./API/order');
 seneca.client({});
-seneca.listen({post: 3000, type: 'tcp', pin: 'role:order'});
+seneca.listen({type: 'http', pin: 'role:order'});
 seneca.ready(() => {
   app.use(seneca.export('web/context')().routes())
 });
