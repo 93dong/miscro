@@ -2,16 +2,14 @@
   "name": "miscoservice",
   "version": "1.0.0",
   "description": "misco USER",
-  "main": "index.js'",
-  "scripts": {
-    "build": "node build/index.js"
-  },
   "dependencies": {
     "koa": "^2.11.0",
     "koa-body": "^4.1.1",
     "koa-router": "^8.0.8",
     "ora": "^4.0.3",
     "seneca": "^3.20.3",
+    "mongodb": "^3.5.5",
+    "mongoose": "^5.9.7",
     "seneca-web": "^2.2.1",
     "seneca-web-adapter-koa2": "^1.2.1",
     "webpack": "^4.42.1"
