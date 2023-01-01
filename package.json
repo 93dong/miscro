@@ -12,6 +12,6 @@
     "mongoose": "^5.9.7",
     "seneca-web": "^2.2.1",
     "seneca-web-adapter-koa2": "^1.2.1",
-    "webpack": "^4.42.1"
+    "webpack": "^5.75.0"
   }
 }
